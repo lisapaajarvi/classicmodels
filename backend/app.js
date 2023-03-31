@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config()
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -20,6 +21,7 @@ app.get("/productlines", (req, res) => {
         if(err) {
         console.log("err", err);
         }
+        console.log(process.env.DATABASE_USER)
         connection.query("SELECT * FROM productlines", (err, data) => {
             if(err) {
                 console.log("err", err);
