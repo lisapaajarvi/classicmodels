@@ -39,7 +39,7 @@ export default function productPage() {
         let ul = document.createElement("ul")
         data.map(product => {
             let li = document.createElement("li");
-            li.innerText = product.productName + ", " + product.MSRP;
+            li.innerText = product.productName + ", " + product.MSRP + "$";
             ul.appendChild(li)
         })
         root.appendChild(ul)
